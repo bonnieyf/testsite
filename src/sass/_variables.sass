@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon&family=Noto+Serif+TC&family=Poppins&display=swap')
+
+@function vw($px-vw, $base-vw: 1920px)    
+  @return ($px-vw * 100vw) / $base-vw
+
+@mixin desktop
+  @media(max-width:1200px)
+    @content
+
+@mixin pad
+  @media(max-width:768px)
+    @content
+
+@mixin mobile
+  @media(max-width:375px)
+    @content
+
+$black: #000000
+$darkbg: #D8D8D8
+$bg: #E8E8E8
+$lightBg: #E8E8E8
+$org: #FA6A18
+
+body, html
+  padding: 0
+  margin: 0
+  text-align: center
+

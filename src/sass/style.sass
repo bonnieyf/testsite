@@ -1,0 +1,872 @@
+
+  
+.section
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 100%
+  height: 100vh
+  padding: 45px
+  box-sizing: border-box
+
+  &.gray
+    background-color: $bg
+  
+
+  &.light-gray
+    background-color: $bg
+  
+
+
+.border-t-bar,
+.border-l-bar,
+.border-r-bar,
+.border-b-bar
+  position: fixed
+  background-color: $lightBg
+  z-index: 10
+
+$borderWidth: 40px
+$borderWidthPad: 30px
+
+.border-t-bar
+  top: 15px
+  left: 0
+  width: 100%
+  height: $borderWidth
+
+  +pad
+    height: $borderWidthPad
+
+
+.border-b-bar
+  bottom: 0
+  left: 0
+  width: 100%
+  height: $borderWidth
+  +pad
+    height: $borderWidthPad
+
+
+.border-l-bar
+  top: 0
+  left: 0
+  width: $borderWidth
+  height: 100%
+  +pad
+    width: $borderWidthPad
+
+
+.border-r-bar
+  top: 0
+  right: 0
+  width: $borderWidth
+  height: 100%
+  +pad
+    width: $borderWidthPad
+
+
+section.home
+  position: relative
+  background: $darkbg
+  overflow: hidden
+
+
+.home-obj-1
+  position: absolute
+  top: vw(220px)
+  right: vw(100px)
+  width: vw(400px)
+
+
+.home-obj-2
+  position: absolute
+  top: vw(748px)
+  left: vw(65px)
+  width: vw(400px)
+
+
+
+section.top-banner
+  position: relative
+  background: $darkbg
+  overflow: hidden
+
+
+.top-banner-obj-1
+  position: absolute
+  top: 220px
+  right: 100px
+  width: 400px
+
+
+.top-banner-obj-2
+  position: absolute
+  top: 748px
+  left: 65px
+  width: 400px
+
+
+
+section.work-detail
+  position: relative
+  background: $darkbg
+  overflow: hidden
+
+
+.work-detail-obj-1
+  position: absolute
+  top: 220px
+  right: 100px
+  width: 400px
+
+
+.work-detail-obj-2
+  position: absolute
+  top: 748px
+  left: 65px
+  width: 400px
+
+
+
+
+
+section.work-experience
+  position: relative
+  background: #E0E0E0
+  justify-content: end
+
+
+
+.work-exp-obj-1
+  position: absolute
+  top: vw(174px)
+  left: vw(161px)
+  width: vw(578px)
+
+
+.work-exp-obj-2
+  position: absolute
+  top: vw(470px)
+  left: vw(732px)
+  width: vw(100px)
+  height: vw(114px)
+  background: $org
+
+
+.work-experience-list
+  flex: 50%
+  max-width: 50%
+
+
+section.talk2me
+  position: relative
+  background: $darkbg
+
+
+
+.talk2me-obj-1
+  position: absolute
+  top: vw(-50px)
+  left: vw(380px)
+  width: vw(400px)
+  
+
+  +pad
+    height: 200px
+    overflow: hidden
+
+
+
+.talk2me-obj-2
+  position: absolute
+  top: vw(84px)
+  right: vw(253px)
+  width: vw(100px)
+  height: vw(114px)
+  background: $org
+
+  +pad
+    height: 200px
+    overflow: hidden
+
+
+.talk2me-obj-3
+  position: absolute
+  top: vw(773px)
+  left: vw(342px)
+  width: vw(100px)
+  height: vw(114px)
+  background: $org
+
+
+.section-main
+  z-index: 9
+
+
+.section.collection
+  background-color: #E0E0E0
+  padding-top: 80px
+  padding-bottom: 80px
+  align-items: flex-start
+  justify-content: start
+  min-height: 100vh
+  height: auto
+
+
+.collection-bar
+  position: relative
+  padding-left: 230px
+  width: 100%
+  min-height: 70px
+  box-sizing: border-box
+  display: flex
+  align-items: flex-end
+
+
+.group-row
+  display: flex
+  flex-flow: wrap row
+  width: 100%
+
+
+.group-col
+  &.sp3
+    flex: 33.3%
+    max-width: 33.3%
+  
+
+.collection-group
+  text-align: center
+  margin: 100px 0
+
+  .image
+    margin-left: -7%
+    margin-bottom: 30px
+  
+
+  a
+    text-decoration: none
+    h2
+      position: relative
+      display: inline-block
+      color: #363636
+      font-size: 20px
+      font-weight: normal
+      text-transform: uppercase
+      line-height: 1.5
+      font-family: 'Poppins', sans-serif
+
+      &:before  
+        content: ""
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        height: 1px
+        background-color: #363636
+      
+      
+    
+  
+
+.collection-bar--title
+  position: absolute
+  top: 0
+  left: 0
+  color: $org
+  font-size: 45px
+  font-weight: normal
+  font-family: 'Poppins', sans-serif
+  display: inline-block
+  text-transform: uppercase
+  margin: 0
+
+  &:before 
+    content: ""
+    display: block
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 4px
+    background-color: $org
+  
+
+
+.collection-navi
+  a
+    display: inline-block
+    color: $org
+    font-size: 20px
+    line-height: 1.5
+    font-family: 'Poppins', sans-serif
+    margin: 0 15px
+    text-decoration: none
+    text-transform: uppercase
+  
+
+
+
+
+.section-top-line
+  width: 100%
+  height: 15px
+  background-color: $black
+  position: fixed
+  z-index: 20
+
+
+.about-kay
+  font-family: 'IM Fell French Canon', serif
+  padding-top: 12%
+  text-align: center
+
+  h2
+    color: #363636
+    font-size: vw(115px)
+    font-weight: 500
+    line-height: 1
+    letter-spacing: -2px
+    margin: 0
+  
+
+  p
+    color: #363636
+    font-size: vw(80px)
+    font-weight: 500
+    line-height: 1.5
+    margin: 0
+    letter-spacing: -2px
+  
+
+
+
+.section-inner
+  max-width: 1600px
+  margin: 0 auto
+  width: 100%
+  padding: 0 15px
+  box-sizing: border-box
+
+
+.top-banner-main
+  font-family: 'IM Fell French Canon', serif
+  padding-top: 5%
+
+  h2
+    color: #363636
+    font-size: vw(115px)
+    font-weight: 500
+    line-height: 1
+    letter-spacing: -2px
+    margin: 0
+  
+
+  p
+    color: #363636
+    font-size: vw(80px)
+    font-weight: 500
+    line-height: 1.5
+    margin: 0
+    letter-spacing: -2px
+    text-transform: lowercase
+  
+
+
+
+.work-detail-main
+  font-family: 'IM Fell French Canon', serif
+  padding-top: 5%
+
+  h2
+    position: absolute
+    top: vw(95px)
+    left: vw(95px)
+    width: vw(500px)
+    color: #363636
+    font-size: vw(80px)
+    font-weight: 500
+    line-height: 1.2
+    text-align: left
+    margin: 0
+  
+
+  p
+    color: #363636
+    font-size: vw(80px)
+    font-weight: 500
+    line-height: 1.5
+    margin: 0
+    letter-spacing: -2px
+  
+
+  .desc
+    position: absolute
+    bottom: vw(120px)
+    right: vw(160px)
+    width: vw(300px)
+    padding-left: vw(70px)
+    height: auto
+    font-family: 'Poppins', sans-serif
+    color: #363636
+    box-sizing: border-box
+
+    h3
+      position: relative
+      font-size: vw(53px)
+      font-weight: normal
+      line-height: 1
+      text-align: left
+      margin: 0
+      margin-bottom: vw(30px)
+
+      .ico-plus-md
+        position: absolute
+        top: 10px
+        left: -70px
+      
+
+      .title-bottom-border
+        position: relative
+      
+      
+      .title-bottom-border:before
+        content: ""
+        position: absolute
+        bottom: 3px
+        left: 0
+        width: 100%
+        height: 3px
+        background-color: #363636
+      
+    
+
+
+    ol
+      color: #363636
+      list-style: none
+      padding-left: 0
+      text-align: left
+      font-size: 30px
+      line-height: 1.2
+      text-transform: uppercase
+    
+  
+
+
+.talk2me-content
+  position: relative
+  text-align: center
+  span
+    color: $black
+    font-size: 14px
+    display: block
+    text-align: center
+    margin-bottom: 80px
+    font-family: 'Poppins', serif
+  
+
+  h2
+    font-family: 'IM Fell French Canon', serif
+    font-size: vw(115px)
+    font-weight: normal
+    letter-spacing: -2px
+    margin: 0
+  
+
+  p
+    display: inline-block
+    font-family: 'IM Fell French Canon', serif
+    font-size: vw(80px)
+    letter-spacing: -2px
+    margin: 0
+
+    &:nth-child(5)
+      position: relative
+      padding-left: vw(110px)
+    
+
+    span
+      position: absolute
+      top: 50%
+      transform: translateY(-30%)
+      left: 0
+      color: $org
+      font-size: vw(14px)
+      line-height: 1.5
+      letter-spacing: vw(20px)
+      text-align: center
+      display: block
+      padding-bottom: vw(15px)
+      font-family: 'Poppins', serif
+
+      &:before
+        content: ""
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 80%
+        height: 2px
+        background-color: $org
+      
+    
+  
+
+  .arrow-down
+    position: absolute
+    bottom: 80px
+    left: 50%
+    transform: translateX(-50%)
+    width: 39px
+    height: 37px
+    background: url('/src/assets/arrow-down.svg') no-repeat center top
+    background-size: contain
+  
+
+
+.kay-illustrator
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translateX(-45%) translateY(-45%)
+  width: vw(1090px)
+  z-index: 5
+
+
+.collection-image
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translateX(-55%) translateY(-45%)
+  width: 820px
+  z-index: 5
+
+  img
+    width: 100%
+  
+
+
+.collection-detail
+  padding-top: vw(100px)
+  padding-bottom: vw(150px)
+
+  .image
+    display: block
+    margin-bottom: vw(30px)
+  
+
+
+.button-play
+  position: relative
+  display: block
+  width: 100px
+  margin: 0 auto
+  text-decoration: none
+
+  span.ico-play
+    display: inline-block
+    background-color: $org
+  
+
+  span.ico-text
+    position: absolute
+    bottom: -8px
+    right: 130px
+    color: $org
+    font-size: 13px
+    line-height: 2
+    letter-spacing: 10px
+    text-align: left
+    font-family: 'Poppins', sans-serif
+  
+
+
+.top-title 
+  position: fixed
+  top: 15px
+  left: 15px
+  right: 15px
+  color: $black
+  text-align: center
+  z-index: 30
+  
+
+  h1 
+    display: block
+    margin: 0
+    font-size: 18px
+    font-weight: normal
+    line-height: 40px
+    letter-spacing: 1px
+    font-family: 'IM Fell French Canon', serif
+  
+
+
+
+.bottom-links
+  padding-top: 160px
+  text-align: center
+
+  a
+    display: inline-block
+    color: $org
+    padding-right: 40px
+    text-decoration: none
+
+    &:last-child
+      padding-right: 0
+    
+  
+
+
+.collapse-group
+  text-align: left
+  padding-left: 100px
+  margin-bottom: 45px
+
+  ol
+    padding-left: 0
+    list-style: none
+    color: #363636
+    font-size: 14px
+    line-height: 2
+    font-family: 'Noto Serif TC', serif
+  
+
+  a
+    position: relative
+    display: block
+    color: #363636
+    font-size: 76px
+    text-decoration: none
+    line-height: 1
+    margin-bottom: 45px
+
+    .title
+      position: relative
+      display: inline-block
+      font-family: 'Poppins', serif
+
+      &:before
+        content: ""
+        position: absolute
+        bottom: -13px
+        left: 0
+        width: 100%
+        height: 4px
+        background-color: #363636
+      
+    
+  
+  
+
+span.ico-plus
+  position: absolute
+  top: 50%
+  left: -100px
+  margin-top: -30px
+  display: block
+  width: 60px
+  height: 60px
+
+  &:before,&:after
+    display: block
+    content: ""
+    width: 100%
+    height: 5px
+    background: $org
+  
+
+  &:before
+    position: absolute
+    top: 50%
+    left: 0
+    margin-top: -3px
+  
+
+  &:after
+    position: absolute
+    top: 0
+    left: 50%
+    margin-left: -3px
+    width: 5px
+    height: 100%
+  
+
+
+
+span.ico-plus-sm
+  position: relative
+  display: block
+  width: 30px
+  height: 30px
+  margin: 0 auto
+
+  &:before,&:after
+    display: block
+    content: ""
+    width: 100%
+    height: 3px
+    background: $org
+  
+
+  &:before
+    position: absolute
+    top: 50%
+    left: 0
+    margin-top: -1.5px
+  
+
+  &:after
+    position: absolute
+    top: 0
+    left: 50%
+    margin-left: -2px
+    width: 3px
+    height: 100%
+  
+
+
+
+span.ico-plus-md
+  position: relative
+  display: block
+  width: 40px
+  height: 40px
+  margin: 0 auto
+
+  &:before,&:after
+    display: block
+    content: ""
+    width: 100%
+    height: 3px
+    background: $org
+  
+
+  &:before
+    position: absolute
+    top: 50%
+    left: 0
+    margin-top: -1.5px
+  
+
+  &:after
+    position: absolute
+    top: 0
+    left: 50%
+    margin-left: -2px
+    width: 3px
+    height: 100%
+  
+
+
+#button-scroll-top
+  position: fixed
+  bottom: vw(60px)
+  right: vw(118px)
+  width: vw(78px)
+  height: vw(78px)
+  z-index: 20
+
+  img
+    max-width: 100%
+
+  a
+    display: block
+    width: 100%
+    height: 100%
+  
+
+
+
+#button-hamburger
+  position: fixed
+  top: 30px
+  right: 45px
+  width: 30px
+  height: 30px
+  z-index: 50
+  cursor: pointer
+
+  span
+    display: block
+    position: absolute
+    top: 0
+    width: 100%
+    height: 2px
+    background-color: $black
+
+    &:nth-child(2)
+      top: 11px
+    
+
+  
+
+
+
+
+    
+.top-banner-main
+  text-align: center
+
+
+#navi-close
+  position: fixed
+  top: 30px
+  right: 30px
+  width: 50px
+  z-index: 20
+
+
+.nav-contact-links
+  position: absolute
+  bottom: 15px
+  left: 0
+  ol
+    list-style: none
+    padding-left: 30px
+    li
+      display: inline-block
+      padding-right: 20px
+    
+  
+  a
+    display: inline-block
+    color: #fff
+    font-size: 16px
+    line-height: 1
+    text-decoration: none
+  
+
+
+.nav-obj
+  position: absolute
+  width: 101px
+  height: 114px
+  background-color: $org
+
+
+.nav-obj-1
+  top: 157px
+  left: 253px
+
+
+.nav-obj-2
+  top: 343px
+  left: 563px
+
+
+.nav-obj-3
+  top: 366px
+  left: 114px
+
+
+.nav-obj-4
+  bottom: 222px
+  left: 613px
+
+
+.nav-obj-5
+  bottom: 57px
+  left: 165px
