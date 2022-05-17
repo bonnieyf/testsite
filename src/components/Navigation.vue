@@ -1,4 +1,5 @@
 <template>
+
   <div id="button-hamburger" @click="openNavigation">
       <span></span>
       <span></span>
@@ -32,6 +33,20 @@
     </div>
     </div>
   </nav>
+
+  <div id="btn-scroll" @scroll="scrollHandler">
+    <a href="#">
+      <svg xmlns="http://www.w3.org/2000/svg" width="52.981" height="87.21" viewBox="0 0 52.981 87.21">
+        <g id="グループ_3517" data-name="グループ 3517" transform="translate(-1841.019 -939.191)">
+          <g id="グループ_3516" data-name="グループ 3516">
+            <path id="パス_1967" data-name="パス 1967" d="M-3025.531,957.734v86.21l-12.578-22.38" transform="translate(4880 -18.543)" fill="none" stroke="#ff7423" stroke-linejoin="round" stroke-width="2"/>
+            <text id="scroll" transform="translate(1884 1023) rotate(-90)" fill="#ff7423" font-size="29" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Scroll</tspan></text>
+          </g>
+        </g>
+      </svg>
+
+    </a>
+  </div>
 </template>
 
 <script>
@@ -39,12 +54,17 @@
     data(){
       return {
         showNav: false,
+        isShowScroll: false,
       }
     },
     methods: {
       openNavigation(){
         this.showNav = !this.showNav;
       },
+      scrollHandler(e){
+        this.isShowScroll = e.target.scrollTop > 100 ? false : true;
+        console.log(e.target.scrollTop)
+      }
     },
     
   }
