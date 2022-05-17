@@ -1,0 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon&family=Noto+Serif+TC&family=Poppins&display=swap");
+body, html {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  scroll-behavior: smooth;
+}

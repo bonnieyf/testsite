@@ -1,17 +1,84 @@
 
-  
+#navigation
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  z-index: 2000
+  background-color: $black
+  padding: 13px
+  box-sizing: border-box
+  opacity: 0
+  display: none
+
+  &.shrik
+    opacity: 1
+    display: block
+
+  .nav-row
+    display: flex
+    width: 100%
+    height: 100%
+    flex-flow: wrap row
+    align-items: stretch
+    justify-content: center
+
+  .nav-col
+    position: relative
+    flex: 50%
+    display: flex
+    align-items: center
+    justify-content: center
+
+    &:nth-child(2)
+      background-color: #E8E8E8
+      +pad
+        display: none
+
+  .nav-top-title
+    color: $org
+    position: absolute
+    top: 13px
+    left: 13px
+    right: 13px
+    font-size: 14px
+    font-weight: normal
+    font-family: 'Poppins', sans-serif
+    letter-spacing: 5px
+    text-align: center
+
+    +pad
+      top: vw(77px,390px)
+
+  .nav-content
+    ol
+      padding-left: 0
+
+    a
+      color: #262626
+      font-size: 60px
+      line-height: 1.2
+      font-family: 'Poppins', sans-serif
+      text-decoration: none
+      transition: all .5s ease
+      +pad
+        font-size: vw(50px,390px)
+      &:hover
+        color: #fff
+
 .section
   display: flex
   align-items: center
   justify-content: center
   width: 100%
-  height: 100vh
+  min-height: 100vh
   padding: 45px
   box-sizing: border-box
 
   +pad
-    padding: 15px
-    padding-top: 55px
+    padding: 15px 20px
+    padding-top: 68px
 
   &.gray
     background-color: $bg
@@ -74,10 +141,13 @@ section.home
   position: relative
   background: $darkbg url(../assets/bmp.png) repeat
   overflow: hidden
+  align-items: flex-start
 
-  +pad
-    align-items: flex-start
+  +desktopL
+    align-items: center
+    
 
+  
 
 .home-obj-1
   position: absolute
@@ -117,8 +187,13 @@ section.top-banner
 
 section.work-detail
   position: relative
-  background: $darkbg
+  background: $darkbg url(../assets/bmp.png) repeat
   overflow: hidden
+
+  +pad
+    align-items: start
+    justify-content: start
+    flex-flow: column
 
 
 .work-detail-obj-1
@@ -142,6 +217,7 @@ section.work-experience
   position: relative
   background: #E0E0E0
   justify-content: end
+  padding-bottom: 50px
 
 
 
@@ -164,6 +240,11 @@ section.work-experience
 .work-experience-list
   flex: 50%
   max-width: 50%
+
+  +pad
+    flex: 70%
+    max-width: 70%
+    margin-right: 5%
 
 
 section.talk2me
@@ -222,6 +303,20 @@ section.talk2me
   height: auto
 
 
+.sticky-bar
+  +pad
+    padding-left: 0
+    box-sizing: border-box
+
+    &.sticy
+      background-color: #E8E8E8
+      position: fixed
+      top: 50px
+      left: 0
+      padding: 10px 15px
+      width: 100%
+      z-index: 100
+
 .collection-bar
   position: relative
   padding-left: 230px
@@ -230,6 +325,14 @@ section.talk2me
   box-sizing: border-box
   display: flex
   align-items: flex-end
+  
+
+  +pad
+    padding-left: 0
+    flex-flow: column
+    align-items: center
+    text-align: center
+    justify-content: center
 
 
 .group-row
@@ -239,20 +342,43 @@ section.talk2me
 
 
 .group-col
-  &.sp3
-    flex: 33.3%
-    max-width: 33.3%
-  
+  flex: 100%
+  max-width: 100%
+
+  +smallDesktop
+    &.md-sp2
+      flex: 50%
+      max-width: 50%
+
+  +desktop
+    &.sp3
+      flex: 33.3%
+      max-width: 33.3%
 
 .collection-group
   text-align: center
   margin: 100px 0
+  padding: 10px
+  box-sizing: border-box
+
+  +pad
+    margin: 40px 0
 
   .image
-    margin-left: -7%
-    margin-bottom: 30px
-  
+    margin-bottom: 20px
 
+    img
+      width: 100%
+
+    +smallDesktop
+      margin-bottom: 30px
+
+    +desktop
+      margin-bottom: 30px
+
+
+  .desc
+    padding-left: 20%
   a
     text-decoration: none
     h2
@@ -290,6 +416,15 @@ section.talk2me
   text-transform: uppercase
   margin: 0
 
+  +pad
+    position: relative
+    top: auto
+    left: 0
+    display: inline-block
+    margin: 0 auto
+    font-size: vw(20px,390px)
+    margin-bottom: 20px
+
   &:before 
     content: ""
     display: block
@@ -299,6 +434,9 @@ section.talk2me
     width: 100%
     height: 4px
     background-color: $org
+
+    +pad
+      height: 2px
   
 
 
@@ -312,7 +450,9 @@ section.talk2me
     margin: 0 15px
     text-decoration: none
     text-transform: uppercase
-  
+
+    +pad
+      font-size: 14px
 
 
 
@@ -330,16 +470,25 @@ section.talk2me
   padding-top: 12%
   text-align: center
 
+  +desktopL
+    padding-top: 12%
+
   +pad
-    padding-top: 125px
+    padding-top: vw(80px,390px)
 
   h2
     color: #363636
-    font-size: vw(115px)
     font-weight: 500
+    
     line-height: 1
     letter-spacing: -2px
     margin: 0
+
+    +smallDesktop
+      font-size: 80px
+
+    +desktop
+      font-size: vw(115px)
 
     +pad
       font-size: vw(44px,390px)
@@ -348,11 +497,18 @@ section.talk2me
 
   p
     color: #363636
-    font-size: vw(80px)
+    
     font-weight: 500
     line-height: 1.5
     margin: 0
     letter-spacing: -1px
+
+    +smallDesktop
+      font-size: 40px
+
+    +desktop
+      font-size: vw(80px)
+
     +pad
       font-size: vw(21px,390px)
       letter-spacing: -.5px
@@ -379,6 +535,9 @@ section.talk2me
     line-height: 1
     letter-spacing: -2px
     margin: 0
+
+    +pad
+      font-size: vw(44px,390px)
   
 
   p
@@ -389,87 +548,150 @@ section.talk2me
     margin: 0
     letter-spacing: -2px
     text-transform: lowercase
-  
-
+    +pad
+      font-size: vw(21px,390px)
+      letter-spacing: -1px
 
 
 .work-detail-main
   font-family: 'IM Fell French Canon', serif
   padding-top: 5%
 
+  +pad
+    padding-top: 30px
+    
+
   h2
     position: absolute
-    top: vw(95px)
-    left: vw(95px)
-    width: vw(500px)
     color: #363636
-    font-size: vw(80px)
     font-weight: 500
     line-height: 1.2
     text-align: left
     margin: 0
-  
+    top: 10%
+    left: 8%
+    font-size: 70px
+    width: 50%
+
+    +desktop
+      top: 10%
+      left: 8%
+      font-size: 70px
+      width: 40%
+
+    +desktopL
+      top: 95px
+      left: 95px
+      width: 500px
+      font-size: 80px
+
+    +pad
+      position: relative
+      top: auto
+      left: auto
+      width: 100%
+      padding: 15px
+      box-sizing: border-box
+      text-align: center
+      font-size: vw(44px,390px)
+      padding-bottom: 80px
 
   p
     color: #363636
-    font-size: vw(80px)
+    font-size: 80px
     font-weight: 500
     line-height: 1.5
     margin: 0
     letter-spacing: -2px
   
 
-  .desc
-    position: absolute
-    bottom: vw(120px)
-    right: vw(160px)
-    width: vw(300px)
-    padding-left: vw(70px)
-    height: auto
-    font-family: 'Poppins', sans-serif
-    color: #363636
-    box-sizing: border-box
+.work-detail-desc
+  position: absolute
+  bottom: vw(120px)
+  width: 300px
+  padding-left: vw(70px)
+  height: auto
+  font-family: 'Poppins', sans-serif
+  color: #363636
+  box-sizing: border-box
 
-    h3
+  +smallDesktop
+    right: 70px
+  
+  +desktopL
+    right: 160px
+
+  +pad
+    position: relative
+    bottom: auto
+    right: auto
+    left: 50%
+    order: 3
+    padding-left: 42px
+
+  h3
+    position: relative
+    font-weight: normal
+    line-height: 1
+    text-align: left
+    margin: 0
+    margin-bottom: vw(30px)
+
+    +smallDesktop
+      font-size: 40px
+    
+    +desktopL
+      font-size: 53px
+
+    +pad
+      font-size: 32px
+
+    .ico-plus-md
+      position: absolute
+      top: 10px
+      left: -70px
+
+      +pad
+        left: -45px
+        top: 5px
+    
+
+    .title-bottom-border
       position: relative
-      font-size: vw(53px)
-      font-weight: normal
-      line-height: 1
-      text-align: left
-      margin: 0
-      margin-bottom: vw(30px)
-
-      .ico-plus-md
-        position: absolute
-        top: 10px
-        left: -70px
-      
-
-      .title-bottom-border
-        position: relative
-      
-      
-      .title-bottom-border:before
-        content: ""
-        position: absolute
-        bottom: 3px
-        left: 0
-        width: 100%
-        height: 3px
-        background-color: #363636
-      
     
+    
+    .title-bottom-border:before
+      content: ""
+      position: absolute
+      bottom: 3px
+      left: 0
+      width: 100%
+      height: 3px
+      background-color: #363636
+
+      +pad
+        bottom: 2px
+    
+  
 
 
-    ol
-      color: #363636
-      list-style: none
-      padding-left: 0
-      text-align: left
+  ol
+    color: #363636
+    list-style: none
+    padding-left: 0
+    text-align: left
+    line-height: 1.2
+    text-transform: uppercase
+
+    +smallDesktop
+      font-size: 24px
+
+    +desktopL
       font-size: 30px
-      line-height: 1.2
-      text-transform: uppercase
-    
+
+
+    +pad
+      font-size: 15px
   
 
 
@@ -483,7 +705,8 @@ section.talk2me
     text-align: center
     margin-bottom: 80px
     font-family: 'Poppins', serif
-  
+    +pad
+      font-size: vw(12px,390px)
 
   h2
     font-family: 'IM Fell French Canon', serif
@@ -491,6 +714,9 @@ section.talk2me
     font-weight: normal
     letter-spacing: -2px
     margin: 0
+
+    +pad
+      font-size: vw(45px,390px)
   
 
   p
@@ -500,9 +726,15 @@ section.talk2me
     letter-spacing: -2px
     margin: 0
 
+    +pad
+      font-size: vw(31px,390px)
+      letter-spacing: -1px
+
     &:nth-child(5)
       position: relative
       padding-left: vw(110px)
+      +pad
+        padding-left: vw(55px,390px)
     
 
     span
@@ -518,6 +750,10 @@ section.talk2me
       display: block
       padding-bottom: vw(15px)
       font-family: 'Poppins', serif
+
+      +pad
+        font-size: vw(10px,390px)
+        letter-spacing: vw(10px,390px)
 
       &:before
         content: ""
@@ -544,39 +780,87 @@ section.talk2me
 #wrapper
   overflow-x: hidden
 
-#btn-scroll
+#button-scrolldown
   position: absolute
   bottom: 60px
   right: 95px
   width: 52px
   height: auto
   z-index: 200
-  opacity: .5
+  opacity: 0
+  transition: all .5s ease
+
+  svg
+    width: 100%
+
+  +pad
+    right: 50%
+    transform: translateX(50%)
+    width: vw(35px,390px)
+    bottom: 30px
 
   &.show
     opacity: 1
 
+
+  #btnScrollDown_arrow
+    animation: scrolldownAni 2s ease infinite alternate
+
+
+@keyframes scrolldownAni
+  0%,100%
+    transform: translateY(0)
+
+  50%
+    transform: translateY(-25px)
+
+
 .kay-illustrator
   position: absolute
-  top: 50%
-  left: 50%
-  transform: translateX(-45%) translateY(-45%)
-  width: vw(1090px)
   z-index: 5
+  width: 150%
+  max-width: 920px
+  transform: translateX(-45%)
+  top: auto
+  bottom: 0
+  left: 50%
 
-  +pad
-    width: vw(620px,390px)
-    transform: translateX(-45%)
-    top: 32%
+  +desktopL
+    width: 80%
+    top:  50%
+    left: 50%
+    max-width: inherit
+    transform: translateX(-45%) translateY(-45%)
 
-
+  +desktopXL
+    width: 56%
+    min-width: 1090px
+    top:  50%
+    left: 50%
+    transform: translateX(-45%) translateY(-45%)
+  
 .collection-image
   position: absolute
   top: 50%
   left: 50%
   transform: translateX(-55%) translateY(-45%)
-  width: 820px
   z-index: 5
+
+  +smallDesktop
+    width: 55%
+  
+  +desktopL
+    width: vw(820px)
+
+  +pad
+    position: relative
+    top: auto
+    left: auto
+    transform: none
+    width: 90%
+    max-width: 400px
+    order: 2
+    margin: 0 auto 50px
 
   img
     width: 100%
@@ -590,6 +874,9 @@ section.talk2me
   .image
     display: block
     margin-bottom: vw(30px)
+
+    img
+      max-width: 100%
   
 
 
@@ -599,6 +886,12 @@ section.talk2me
   width: 100px
   margin: 0 auto
   text-decoration: none
+
+  +pad
+    width: 70px
+
+    img
+      width: 100%
 
   span.ico-play
     display: inline-block
@@ -615,7 +908,9 @@ section.talk2me
     letter-spacing: 10px
     text-align: left
     font-family: 'Poppins', sans-serif
-  
+
+    +pad
+      right: 80px
 
 
 .top-title 
@@ -652,8 +947,10 @@ section.talk2me
   a
     display: inline-block
     color: $org
+    font-size: 14px
     padding-right: 40px
     text-decoration: none
+    font-family: "Poppins", sans-serif
 
     &:last-child
       padding-right: 0
@@ -664,16 +961,17 @@ section.talk2me
     height: 0
     transition: all .5s ease
 
+   
 .collapse-group.collapseShow .collapse-content
-  height: 200px
-
-  &.mx-h-400
-    height: 400px
+  height: 120px
 
 .collapse-group
   text-align: left
   padding-left: 100px
-  margin-bottom: 45px
+  margin-bottom: 50px
+  +pad
+    padding-left: vw(60px ,390px)
+    margin-bottom: 40px
 
   ol
     padding-left: 0
@@ -682,6 +980,7 @@ section.talk2me
     font-size: 14px
     line-height: 2
     font-family: 'Noto Serif TC', serif
+    margin: 0
   
 
   a
@@ -691,7 +990,11 @@ section.talk2me
     font-size: 76px
     text-decoration: none
     line-height: 1
-    margin-bottom: 45px
+    margin-bottom: 50px
+
+    +pad
+      font-size: vw(46px,390px)
+      margin-bottom: 40px
 
     .title
       position: relative
@@ -719,6 +1022,13 @@ span.ico-plus
   display: block
   width: 60px
   height: 60px
+
+  +pad
+    margin-top: auto
+    top: 0
+    width: vw(40px,390px)
+    height: vw(40px,390px)
+    left: vw(-60px,390px)
 
   &:before,&:after
     display: block
@@ -786,6 +1096,10 @@ span.ico-plus-md
   height: 40px
   margin: 0 auto
 
+  +pad
+    width: 30px
+    height: 30px
+
   &:before,&:after
     display: block
     content: ""
@@ -811,21 +1125,35 @@ span.ico-plus-md
   
 
 
-#button-scroll-top
+#button-scrolltop
   position: fixed
-  top: vw(60px)
-  right: vw(60px)
+  top: 8%
+  right: 55px
   width: vw(78px)
   height: vw(78px)
   z-index: 20
+  opacity: 0
+  visibility: hidden
+  transition: all .5s ease
+  +pad
+    top: auto
+    bottom: vw(25px,390px)
+    right: vw(25px,390px)
+    width: vw(30px,390px)
+    height: vw(30px,390px)
 
-  img
+  svg
     max-width: 100%
 
   a
     display: block
     width: 100%
     height: 100%
+
+
+  &.show
+    opacity: 1
+    visibility: inherit
   
 
 
@@ -872,11 +1200,29 @@ span.ico-plus-md
   width: 50px
   z-index: 20
 
+  svg
+    width: 100%
+
+  +pad
+    top: 20px
+    right: 20px
+    
+    svg path
+      fill: #fff
+
+
 
 .nav-contact-links
   position: absolute
   bottom: 15px
   left: 0
+  font-family: "Poppins", sans-serif
+
+  +pad
+    text-align: center
+    left: 15px
+    right: 15px
+
   ol
     list-style: none
     padding-left: 30px
@@ -891,6 +1237,9 @@ span.ico-plus-md
     font-size: 16px
     line-height: 1
     text-decoration: none
+
+    +pad
+      font-size: 14px
   
 
 
