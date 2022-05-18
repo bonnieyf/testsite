@@ -1,8 +1,6 @@
 <template>
   <section class="section work-experience">
-    <div class="work-exp-obj-1">
-      <img src="/src/assets/background-dots.svg" alt="" />
-    </div>
+    <div class="work-exp-obj-1"></div>
     <div class="work-exp-obj-2"></div>
     <div class="work-experience-list">
       <div class="collapse-group" :class="{ collapseShow: activeExps[0] }">

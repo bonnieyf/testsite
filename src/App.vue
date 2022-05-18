@@ -40,11 +40,7 @@ import Navigation from "./components/Navigation.vue";
         height="87.21"
         viewBox="0 0 52.981 87.21"
       >
-        <g
-          id="グループ_3517"
-          data-name="グループ 3517"
-          transform="translate(-1841.019 -939.191)"
-        >
+        <g data-name="グループ 3517" transform="translate(-1841.019 -939.191)">
           <g id="btnScrollDown_arrow">
             <path
               id="btnScrollDown"

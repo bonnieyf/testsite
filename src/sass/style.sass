@@ -154,6 +154,13 @@ section.home
   top: vw(220px)
   right: vw(100px)
   width: vw(400px)
+  +pad
+    top: vw(90px,390px)
+    right: vw(-210px,390px)
+    width: vw(400px,390px)
+
+    img
+      width: 100%
 
 
 .home-obj-2
@@ -161,6 +168,14 @@ section.home
   top: vw(748px)
   left: vw(65px)
   width: vw(400px)
+
+  +pad
+    top: vw(260px,390px)
+    left: vw(-110px,390px)
+    width: vw(400px,390px)
+
+    img
+      width: 100%
 
 
 
@@ -172,16 +187,36 @@ section.top-banner
 
 .top-banner-obj-1
   position: absolute
-  top: 220px
-  right: 100px
+  top: 15%
+  right: 0%
+  margin-left: vw(223px)
   width: 400px
+
+  +pad
+    right: auto
+    left: 50%
+    margin-left: -5%
+    width: vw(400px,390px)
+
+    img
+      width: 100%
 
 
 .top-banner-obj-2
   position: absolute
-  top: 748px
+  bottom: 15%
   left: 65px
   width: 400px
+
+  +pad
+    bottom: 20%
+    right: auto
+    left: 0%
+    margin-left: -20%
+    width: vw(400px,390px)
+
+    img
+      width: 100%
 
 
 
@@ -198,16 +233,60 @@ section.work-detail
 
 .work-detail-obj-1
   position: absolute
-  top: 220px
-  right: 100px
+  top: 20%
+  right: 5%
   width: 400px
 
+  +smallDesktop
+    top: 20%
+    right: auto
+    left: 50%
+    margin-left: 20%
+    width: 400px
+
+  +desktop
+    top: 20%
+    right: 5%
+    left: auto
+    margin-left: 0
+    width: 400px
+
+  +pad
+    top: 90px
+    right: -30%
+    width: 500px
+
+    img
+      width: 100%
 
 .work-detail-obj-2
   position: absolute
-  top: 748px
-  left: 65px
+  bottom: 20%
+  left: 5%
   width: 400px
+
+  +smallDesktop
+    bottom: 18%
+    left: 50%
+    margin-left: -60%
+    width: 400px
+
+  +desktop
+    bottom: 20%
+    left: 5%
+    margin-left: 0
+    width: 400px
+
+  +pad
+    bottom: auto
+    top: 50%
+    margin-top: 20%
+    left: 50%
+    margin-left: -70%
+    width: 500px
+
+    img
+      width: 100%
 
 
 
@@ -224,22 +303,59 @@ section.work-experience
 .work-exp-obj-1
   position: absolute
   top: vw(174px)
-  left: vw(161px)
-  width: vw(578px)
+  left: 50%
+  margin-left: vw(-754px)
+  width: vw(256px)
+  height: vw(210px)
+  overflow: hidden
+  background: url('/src/assets/background-dots.svg') repeat-x
+
+  +pad
+    top: vw(20px,390px)
+    left: vw(60px,390px)
+    margin-left: 0
+    width: vw(105px,390px)
+    height: vw(98px,390px)
 
 
 .work-exp-obj-2
   position: absolute
-  top: vw(470px)
-  left: vw(732px)
-  width: vw(100px)
-  height: vw(114px)
   background: $org
+  width: 100px
+  height: 114px
 
+
+  +smallDesktop
+    top: 60%
+    left: 20%
+    margin-left: 0
+    
+
+  +desktop
+    top: 60%
+    left: 50%
+    margin-left: vw(-228px)
+
+  +pad
+    top: 77%
+    left: 7%
+    margin-left: 0
+    width: vw(43px,390px)
+    height: vw(48px,390px)
+    overflow: hidden
 
 .work-experience-list
   flex: 50%
   max-width: 50%
+  box-sizing: border-box
+
+  +smallDesktop
+    flex: 55%
+    max-width: 55%
+
+  +desktop
+    flex: 50%
+    max-width: 50%
 
   +pad
     flex: 70%
@@ -257,36 +373,71 @@ section.talk2me
   position: absolute
   top: vw(-50px)
   left: vw(380px)
-  width: vw(400px)
+  width: vw(578px)
+  height: vw(210px)
+  background: url('/src/assets/background-dots.svg') no-repeat
   
 
   +pad
     height: 200px
     overflow: hidden
     
+    
 
 
 
 .talk2me-obj-2
   position: absolute
-  top: vw(84px)
-  right: vw(253px)
-  width: vw(100px)
-  height: vw(114px)
+  top: 10%
+  left: 50%
+  width: 100px
+  height: 114px
   background: $org
 
+  +smallDesktop
+    margin-left: none
+    left: auto
+    right: 20%
+    top: 10%
+
+
+  +desktop
+    margin-left: vw(557px)
+
   +pad
-    height: 200px
+    left: auto
+    right: 8%
+    width: vw(43px,390px)
+    height: vw(48px,390px)
     overflow: hidden
 
 
 .talk2me-obj-3
   position: absolute
-  top: vw(773px)
-  left: vw(342px)
-  width: vw(100px)
-  height: vw(114px)
+  top: 68%
+  left: 50%
+  width: 100px
+  height: 114px
   background: $org
+
+  +smallDesktop
+    margin-left: none
+    left: 10%
+    top: auto
+    bottom: 10%
+
+  +desktop
+    margin-left: vw(-621px)
+    top: 68%
+    left: 50%
+    bottom: auto
+
+  +pad
+    top: auto
+    bottom: 5%
+    margin-left: -40%
+    width: vw(43px,390px)
+    height: vw(48px,390px)
 
 
 .section-main
@@ -379,6 +530,10 @@ section.talk2me
 
   .desc
     padding-left: 20%
+
+    +pad
+      padding-left: 0
+
   a
     text-decoration: none
     h2
@@ -395,13 +550,16 @@ section.talk2me
         content: ""
         position: absolute
         bottom: 0
-        left: 0
-        width: 100%
+        left: 50%
+        transform: translateX(-50%)
+        width: 50%
         height: 1px
         background-color: #363636
-      
+        transition: all .5s ease
       
     
+  &:hover h2:before
+    width: 100%
   
 
 .collection-bar--title
@@ -526,7 +684,10 @@ section.talk2me
 
 .top-banner-main
   font-family: 'IM Fell French Canon', serif
-  padding-top: 5%
+
+  +pad
+    padding-top: 0
+    margin-top: -20%
   
   h2
     color: #363636
@@ -535,6 +696,12 @@ section.talk2me
     line-height: 1
     letter-spacing: -2px
     margin: 0
+
+    +smallDesktop
+      font-size: 115px * 0.8
+
+    +desktop
+      font-size: vw(115px)
 
     +pad
       font-size: vw(44px,390px)
@@ -548,6 +715,13 @@ section.talk2me
     margin: 0
     letter-spacing: -2px
     text-transform: lowercase
+
+    +smallDesktop
+      font-size: 80px * 0.8
+
+    +desktop
+      font-size: vw(80px)
+
     +pad
       font-size: vw(21px,390px)
       letter-spacing: -1px
@@ -558,7 +732,7 @@ section.talk2me
   padding-top: 5%
 
   +pad
-    padding-top: 30px
+    padding-top: 60px
     
 
   h2
@@ -594,7 +768,7 @@ section.talk2me
       box-sizing: border-box
       text-align: center
       font-size: vw(44px,390px)
-      padding-bottom: 80px
+      padding-bottom: 5%
 
   p
     color: #363636
@@ -616,7 +790,8 @@ section.talk2me
   box-sizing: border-box
 
   +smallDesktop
-    right: 70px
+    right: 90px
+    bottom: 8%
   
   +desktopL
     right: 160px
@@ -638,13 +813,13 @@ section.talk2me
     margin-bottom: vw(30px)
 
     +smallDesktop
-      font-size: 40px
+      font-size: 53px * 0.8
     
-    +desktopL
+    +desktop
       font-size: 53px
 
     +pad
-      font-size: 32px
+      font-size: vw(32px,390px)
 
     .ico-plus-md
       position: absolute
@@ -684,14 +859,13 @@ section.talk2me
     text-transform: uppercase
 
     +smallDesktop
-      font-size: 24px
+      font-size: 30px *0.8
 
-    +desktopL
+    +desktop
       font-size: 30px
 
-
     +pad
-      font-size: 15px
+      font-size: vw(15px,390px)
   
 
 
@@ -710,10 +884,15 @@ section.talk2me
 
   h2
     font-family: 'IM Fell French Canon', serif
-    font-size: vw(115px)
     font-weight: normal
     letter-spacing: -2px
     margin: 0
+
+    +smallDesktop
+      font-size: 115px*0.8
+
+    +desktop
+      font-size: vw(115px)
 
     +pad
       font-size: vw(45px,390px)
@@ -725,6 +904,12 @@ section.talk2me
     font-size: vw(80px)
     letter-spacing: -2px
     margin: 0
+
+    +smallDesktop
+      font-size: 80px*0.8
+
+    +desktop
+      font-size: vw(80px)
 
     +pad
       font-size: vw(31px,390px)
@@ -792,10 +977,12 @@ section.talk2me
 
   svg
     width: 100%
+    animation: scrolldownAni  1s ease-in-out infinite
 
   +pad
-    right: 50%
-    transform: translateX(50%)
+    right: auto
+    left: 50%
+    transform: translateX(-50%)
     width: vw(35px,390px)
     bottom: 30px
 
@@ -803,16 +990,13 @@ section.talk2me
     opacity: 1
 
 
-  #btnScrollDown_arrow
-    animation: scrolldownAni 2s ease infinite alternate
-
-
 @keyframes scrolldownAni
-  0%,100%
+  0%
     transform: translateY(0)
-
   50%
-    transform: translateY(-25px)
+    transform: translateY(-20px)
+  100%
+    transform: translateY(0)
 
 
 .kay-illustrator
@@ -960,6 +1144,8 @@ section.talk2me
     overflow: hidden
     height: 0
     transition: all .5s ease
+    padding-right: 30px
+    box-sizing: border-box
 
    
 .collapse-group.collapseShow .collapse-content
@@ -985,15 +1171,21 @@ section.talk2me
 
   a
     position: relative
-    display: block
+    display: inline-block
     color: #363636
     font-size: 76px
     text-decoration: none
     line-height: 1
     margin-bottom: 50px
 
+    +smallDesktop
+      font-size: 76px * 0.8
+
+    +desktop
+      font-size: 76px
+    
     +pad
-      font-size: vw(46px,390px)
+      font-size: vw(44px,390px)
       margin-bottom: 40px
 
     .title
@@ -1012,6 +1204,9 @@ section.talk2me
       
     
   
+.collapse-group.collapseShow .ico-plus
+  &::after
+    transform: rotate(90deg)
   
 
 span.ico-plus
@@ -1036,6 +1231,7 @@ span.ico-plus
     width: 100%
     height: 5px
     background: $org
+    transition: all .5s ease
   
 
   &:before
@@ -1062,6 +1258,7 @@ span.ico-plus-sm
   width: 30px
   height: 30px
   margin: 0 auto
+  transition: all .5s ease
 
   &:before,&:after
     display: block
@@ -1069,6 +1266,7 @@ span.ico-plus-sm
     width: 100%
     height: 3px
     background: $org
+    transition: all .5s ease
   
 
   &:before
@@ -1166,6 +1364,7 @@ span.ico-plus-md
   height: 30px
   z-index: 50
   cursor: pointer
+  overflow: hidden
 
   +pad
     top: 32px
@@ -1181,7 +1380,23 @@ span.ico-plus-md
 
     &:nth-child(2)
       top: 11px
+      
+  &:hover span:nth-child(2)
+    animation: bur 2s infinite alternate
+
+      
+
+
+@keyframes bur
+  0%
+    transform: translateX(0)
+
+  30%
+    transform: translateX(30px)
+    width: 0%
     
+  60%
+    transform: translateX(-30px)
 
   
 

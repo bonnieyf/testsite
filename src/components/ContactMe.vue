@@ -1,6 +1,6 @@
 <template>
   <section class="section talk2me">
-      <div class="talk2me-obj-1"><img src="/src/assets/background-dots.svg" alt=""></div>
+      <div class="talk2me-obj-1"></div>
       <div class="talk2me-obj-2"></div>
       <div class="talk2me-obj-3"></div>
 
